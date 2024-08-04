@@ -1,0 +1,621 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    border: border-box;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'myFirstFont';
+    src: url(./font.otf);
+}
+@font-face {
+    font-family: 'gow';
+    src: url(./GODOFWAR.TTF);
+}
+
+@font-face {
+    font-family: 'cod';
+    src: url("./Call of Ops Duty.otf");
+}
+@font-face {
+    font-family: 'spider';
+    src: url("./HOMOARAK.TTF");
+}
+
+.navbar{
+    height: 36px;
+    background-color: black;
+}
+.nav-logo{
+    height: 36px;
+    width: 110px;
+}
+.logo
+{
+  background-image: url("Symbol-Sony.png");
+  background-size: contain;  
+  background-color: #1F1F1F;
+  margin-left: 1580px;
+  height: 36px;
+  width: 100%;
+}
+.navbar1 {
+    height: 64px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 1000; 
+}
+.nav1-logo{
+    height: 55px;
+    width: 65px;
+}
+.logo1{
+    background-image: url("ps.png");
+    background-size: cover;
+    margin-left: 10px;
+    height: 55px;
+    width: 100%;
+}
+.games-first{
+    font-size: 14px;
+}
+.nav-games{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    opacity: 1;
+}
+.games-second{
+    font-size: 14px;
+}
+.games-third{
+    text-decoration: none;
+}
+.nav-ps5{
+    display: flex;
+    align-items: center;
+    margin-left: 34px;
+}
+.icon{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: #007FFF;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.button-1 {
+    background-color: #7CB9E8;
+    border-radius: 40px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    height: 28px;
+    width: 81px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: 635px;
+  }
+  
+  .button-1:hover,
+  .button-1:focus {
+    background-color: #00308F;
+  }
+  input[type=text] {
+      text-align: left;
+      height: 25px;
+      margin-left: 10px;
+      border: 0.1px solid gray;
+  }
+  input[type=text]:hover{
+      outline: 2px solid gray;
+  }
+  .input-icons i {
+      position: absolute;
+      margin-left: 85px;
+      margin-top: 6px;
+  }
+.navbar-2{
+    display: flex;
+    position: sticky;
+    height: 60px;
+    background-color: white;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+}
+.store-logo{
+    background-image: url("PlayStation_Store.png");
+    background-size: cover;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 10px;
+}
+.store-logo h3 {
+    color: black;
+    font-family: 'myFirstFont', sans-serif;
+    margin-left: 55px;
+    margin-top: 0.3rem;
+    font-size: 20px;
+}
+.navbar-2-text {
+    display: flex;
+    margin-left: 30rem;
+    text-align: center;
+}
+.btn {
+    border: 1.2px solid #3498db;
+    background: none;
+    margin: 10px;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    transition: color 1s;
+    position: relative;
+    border-radius: 14px; 
+}
+
+.button-2, .button-6 {
+    color: #3498db;
+}
+
+.button-3, .button-4, .button-5 {
+    color: #3498db;
+}
+
+.button-2:hover, .button-6:hover {
+    color: #fff;
+}
+
+.button-3:hover, .button-4:hover, .button-5:hover {
+    color: #fff;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background: #3498db;
+    z-index: -1;
+    transition:0.5s;
+}
+
+.button-2::before, .button-6::before {
+    border-radius: 90% 90% 50% 50%;
+}
+
+.button-3::before, .button-4::before, .button-5::before {
+    border-radius: 50% 50% 90% 90%;
+}
+
+.button-2:hover::before, .button-6:hover::before {
+    height: 100%;
+    border-radius: 14px;
+}
+
+.button-3:hover::before, .button-4:hover::before, .button-5:hover::before {
+    height: 100%;
+    border-radius: 14px;
+}
+.banner img{
+    margin-top: 40px;
+    height: 100%;
+    width: 100%;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .container .box {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    margin: 1.8rem;
+  }
+  
+  .container .box:hover .imgBox {
+    transform: translate(-2.5rem, -2.5rem);
+  }
+  
+  .container .box:hover .content {
+    transform: translate(2.5rem, 2.5rem);
+  }
+  
+  .imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .imgBox img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    resize: both;
+    border-radius: 25px;
+  }
+  
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right,red,black);
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+    border-radius: 25px;
+  }
+  
+  .contentf1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right,violet,black);
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+    border-radius: 25px;
+  }
+  .contentx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right,#FEDC56,black);
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+    border-radius: 25px;
+  }
+  .contentstellar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right,#103CE7,#64E9FF);
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+    border-radius: 25px;
+  }
+  
+  .contentmw3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right,green,black);
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+    border-radius: 25px;
+  }
+  .contenthill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right,silver,#8C92AC);
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+    border-radius: 25px;
+  }
+  .contentmulti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right,#FF4066,#FFF16A);
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+    border-radius: 25px;
+  }
+  .dbz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right,#6157FF,#EE49FD);
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+    border-radius: 25px;
+  }
+  .contentzero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right,#2DFFF5,#FFF878);
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+    border-radius: 25px;
+  }
+  .content h2 {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 1px;
+  }
+  .dbz h2 {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 250;
+    line-height: 1rem;
+    letter-spacing: 0.3px;
+  }
+  .dbz span {
+    color: #fff;
+    font-size: 0.5rem;
+    font-weight: 150;
+    letter-spacing: 2px;
+  } 
+  .content span {
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  
+  @media (max-width: 600px) {
+    .container .box:hover .content {
+      transform: translate(0, 3.5rem);
+    }
+    .container .box:hover .imgBox {
+      transform: translate(0, -3.5rem);
+    }
+  }
+body{
+    text-align: center;
+}
+h2{
+    opacity: 1;
+    font-size: 23px;
+    transition: 0.6s;
+    opacity: 0.8;
+    font-family: myFirstFont;
+}
+hr {
+    margin-left: 715px;
+    width: 15%;
+    border-radius: 30%;
+    height: 4px;
+    background: red;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.top-games{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.top-games img{
+    height: 70%;
+    width: 70%;
+    border-radius: 5%;
+    transition: 0.7s ease;
+    margin: 15px 5px 5px 15px;
+}
+.top-games img:hover{
+    opacity: 0.7;
+    height: 75%;
+    width: 75%;
+}
+
+.gow{
+    font-family: gow;
+    font-size: 22px;
+}
+.spider{
+    font-family: spider;
+    font-size: 15px;
+}
+@font-face {
+    font-family: 'wwe';
+    src: url("./WWE Raw.ttf");
+}
+.cod{
+    font-family: cod;
+    font-size: larger;
+}
+.wwe{
+    font-family: wwe;
+    font-size:xx-large ;
+}
+@font-face {
+    font-family: 'shock';
+    src: url("./Gamez PERSONAL USE ONLY!.ttf");
+}
+.shock{
+    font-family: shock;
+}
+
+@font-face {
+    font-family: 'creed';
+    src: url("./Assassin$.ttf");
+}
+.creed{
+    font-family: creed;
+    font-size: 25px;
+    font-weight:600;
+}
+@font-face {
+    font-family: 'wars';
+    src: url("./SF Distant Galaxy Italic.ttf");
+}
+.wars{
+    font-family: wars;
+    font-size: 17px;
+    font-weight: lighter;
+}
+footer {
+    background-color: #0039a6;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+.copy{
+    margin-top: 100px;
+    margin-right: 20px;
+}
+footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .footer-column {
+    width: 25%;
+    margin-bottom: 20px;
+}
+
+footer .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer .footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-column ul li {
+    margin-bottom: 8px;
+}
+
+footer .footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+footer .footer-column-social i {
+    height: 25px;
+    width: 25px;
+}
+footer .footer-column-social i:hover{
+    opacity: 0.5;
+}
+footer .footer-column ul li a:hover {
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 992px) {
+    footer .footer-column {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    footer .footer-column {
+        width: 100%;
+    }
+}
+.footer-logo{
+    background-image: url("ps1.png");
+    background-size: contain;
+    height: 73px;
+    width: 90px;
+}
+footer hr {
+    width: 98vw;
+    position: absolute;
+    left: -708px;
+}
+

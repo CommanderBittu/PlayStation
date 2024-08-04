@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayStation Store - Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./ac.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Get item details from the closest parent element (.overlay or .diff-ed)
+      const itemContainer = button.closest('.overlay, .diff-ed');
+      
+      const itemName = itemContainer.querySelector('.det h1').innerText;
+      const itemPrice = itemContainer.querySelector('.cost h1, .cost h3').innerText;
+
+      const item = {
+        name: itemName,
+        price: itemPrice,
+        editionname: '', // Assuming edition name isn't available for all products
+        editionprice: ''  // Assuming edition price isn't available for all products
+      };
+      addToCart(item);
+      alert('Item added to cart!');
+    });
+  });
+
+
+            function addToCart(item) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push(item);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartDisplay();
+            }
+
+            function updateCartDisplay() {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const cartDiv = document.querySelector('.cart-items');
+                cartDiv.innerHTML = '';
+                cart.forEach((item, index) => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.classList.add('cart-item');
+                    itemDiv.innerHTML = `
+                        <p>${item.name} - ${item.price}</p>
+                        <button class="remove-button" data-index="${index}">Remove</button>
+                    `;
+                    cartDiv.appendChild(itemDiv);
+                });
+                attachRemoveEventListeners();
+            }
+
+            function attachRemoveEventListeners() {
+                const removeButtons = document.querySelectorAll('.remove-button');
+                removeButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const index = button.getAttribute('data-index');
+                        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                        cart.splice(index, 1);
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        updateCartDisplay();
+                    });
+                });
+            }
+
+            updateCartDisplay();
+            const username = localStorage.getItem('username');
+            if (username) {
+                const signInButton = document.querySelector('.button a button');
+                signInButton.textContent = username;
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="dp">
+        <img src="./1147129.jpg"alt="background image">
+    </div>
+    <div class="navbar">
+        <div class="nav-logo">
+            <div class="logo"></div>
+        </div>
+    </div>
+    
+    <div class="navbar1">
+        <div class="nav1-logo">
+            <div class="logo1"></div>
+        </div>
+        <div class="nav-games">
+            <a class="games-third" href="https://www.playstation.com/en-in/ps5/games/?smcid=pdc%3Aen-in%3Aprimary%20nav%3Amsg-games%3Aps5">Games</a>
+            <div class="icon">
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="nav-ps5">
+                <a class="games-third" href="station.html">PS5</a>
+                <div class="icon">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="nav-ps5">
+                <a class="games-third" href="https://www.playstation.com/en-in/ps4/?smcid=pdc%3Aen-in%3Aprimary%20nav%3Amsg-ps4%3Aconsole">PS4</a>
+                <div class="icon">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="nav-ps5">
+                <a class="games-third" href="https://www.playstation.com/en-in/ps-plus/?smcid=pdc%3Aen-in%3Aprimary%20nav%3Amsg-services%3Aps-plus">Services</a>
+                <div class="icon">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="nav-ps5">
+                <a class="games-third" href="./accessories">Accessories</a>
+                <div class="icon">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="nav-ps5">
+                <a class="games-third" href="https://blog.playstation.com/">News</a>
+                <div class="icon">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="nav-ps5">
+                <a class="games-third" href="./store">Store</a>
+                <div class="icon">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="nav-ps5">
+                <a class="games-third" href="https://www.playstation.com/en-in/support/?smcid=other%3Aen-in%3Ablank%3Aprimary%20nav%3Amsg-support%3Asupport">Support</a>
+                <div class="icon">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="button">
+                <a href="/login"><button class="button-1" role="button">Sign In</button></a>
+            </div>
+            <div class="input-icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="fname" name="fname" size="10" placeholder="Search">
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="navbar-2">
+            <div class="store-logo">
+                <h3>PlayStation Store</h3>
+            </div>
+            <div class="navbar-2-text">
+                <button class="btn button-2" role="button">Latest</button>
+                <button class="btn button-3" role="button">Collection</button>
+                <button class="btn button-4" role="button">Deals</button>
+                <button class="btn button-5" role="button">Subscriptions</button>
+                <button class="btn button-6" role="button">Browse</button>
+            </div>  
+        </div>
+    </header>
+    <div class="overlay">
+        <div class="price">
+            <h3>
+                Play Station 5 </h3>
+            <p>Sony </p>
+            <div class="gen">   
+                <p>PS5</p>
+               
+            </div> 
+            <div class="stars">
+                <h4>5</h4>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <h4>113.2K ratings</h4>
+            </div>  
+            <div class="cost">
+                <h1>Rs 44,999</h1>
+            </div>
+            
+        </div>        
+        <div class="cart">
+            <h3>Cart</h3>
+            <div class="cart-items"></div>
+            <a href="./checkout"><button class="checkout-button">Checkout</button></a>
+        </div>
+    </div>
+    <div class="details">
+        <h2>Editions:</h2>
+        <div class="editions">
+            <div class="diff-ed">
+                <img src="./HkdMToxijoHfz4JwUgfh3G.jpg">
+                <div class="det">
+                    <h1>Play Station 5 Disc Edition</h1>
+                    <div class="gene">
+                        
+                        <p>PS5</p>
+                    </div>
+                    <div class="cost">
+                        <h3>Rs 49,999</h3>
+                    </div>
+                    <div class="but">
+                        <button class="add-to-cart">Add To Cart</button>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="diff-ed">
+                <img src="./sony-playstation5-spiderman-2-edition-pre-order1689944428457.jpg">
+                <div class="det">
+                    <h1>Play Station 5 Spider-Man Edition</h1>
+                    <div class="gene">
+                        
+                        <p>PS5</p>
+                    </div>
+                    <div class="cost">
+                        <h3>Rs 62,990</h3>
+                    </div>
+                    <div class="but">
+                        <button class="add-to-cart">Add To Cart</button>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="diff-ed">
+                <img src="./1113740.jpg">
+                <div class="det">
+                    <h1>Play Station 5 Digital Edition</h1>
+                    <div class="gene">
+                        
+                        <p>PS5</p>
+                    </div>
+                    <div class="cost">
+                        <h3>Rs 44,999</h3>
+                    </div>
+                    <div class="but">
+                        <button class="add-to-cart">Add To Cart</button>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="footer-logo">
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#">About SIE</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">PlayStation Studios</a></li>
+                <li><a href="#">PlayStation Productions</a></li>
+                <li><a href="#">Corporate</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="#">PS5</a></li>
+                <li><a href="#">PS4</a></li>
+                <li><a href="#">PS VR2</a></li>
+                <li><a href="#">PS Plus</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Games</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Values</h3>
+            <ul>
+                <li><a href="#">Environment</a></li>
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Online safety</a></li>
+                <li><a href="#">Diversity, equity & inclusion</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Support hub</a></li>
+                <li><a href="#">PlayStation Safety</a></li>
+                <li><a href="#">PSN Status</a></li>
+                <li><a href="#">PlayStation Repairs</a></li>
+                <li><a href="#">Password reset</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="#">PSN terms of service</a></li>
+                <li><a href="#">PS Store cancellation policy</a></li>
+                <li><a href="#">Age ratings</a></li>
+                <li><a href="#">Health warning</a></li>
+                <li><a href="#">Developers</a></li>
+                <li><a href="#">Glossary</a></li>
+            </ul>
+        </div>
+        <div class="copy">
+            © 2024 Sony Interactive Entertainment Europe Ltd. All rights reserved.
+        </div>
+        <div class="footer-column">
+            <h3>Connect</h3>
+            <div class="footer-column-social">
+                <i class="fa-brands fa-x-twitter" ></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <ul>
+                <li><a href="#">iOS app</a></li>
+                <li><a href="#">Android APP</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Function to update cart display
+            function updateCartDisplay() {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const cartDiv = document.querySelector('.cart-items');
+                cartDiv.innerHTML = '';
+                cart.forEach((item, index) => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.classList.add('cart-item');
+                    itemDiv.innerHTML = `
+                        <p>${item.name} - ${item.price}</p>
+                        <button class="remove-button" data-index="${index}">Remove</button>
+                    `;
+                    cartDiv.appendChild(itemDiv);
+                });
+                attachRemoveEventListeners();
+            }
+
+            // Function to attach event listeners to remove buttons
+            function attachRemoveEventListeners() {
+                const removeButtons = document.querySelectorAll('.remove-button');
+                removeButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const index = button.getAttribute('data-index');
+                        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                        cart.splice(index, 1);
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        updateCartDisplay();
+                    });
+                });
+            }
+
+            // Update cart display when the page loads
+            updateCartDisplay();
+        });
+    </script>
+    
+</body>
+</html>

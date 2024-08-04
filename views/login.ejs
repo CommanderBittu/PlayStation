@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/log.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form id="login-form" action="/login" method="post">
+            <div class="form-group">
+                <input type="text" id="name" name="username" placeholder="" required autocomplete="off">
+                <label for="name">Name:</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder="" required>
+                <label for="password">Password:</label>
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <div class="account-options">
+            <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('name').value;
+            localStorage.setItem('username', username);
+            e.target.submit();
+        });
+    </script>
+</body>
+</html>

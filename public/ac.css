@@ -1,0 +1,609 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'myFirstFont';
+    src: url(./font.otf);
+}
+.dp {
+    position: relative;
+    height: 100vh;
+    margin-top: 50px;
+}
+.dp img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    position: relative;
+}
+
+.navbar {
+    position: absolute; 
+    top: 0;
+    width: 100%;
+    height: 36px;
+    background-color: black;
+    z-index: 1; 
+}
+
+.nav-logo {
+    height: 36px;
+    width: 110px;
+}
+
+.logo {
+    background-image: url("Symbol-Sony.png");
+    background-size: contain;  
+    background-color: #1F1F1F;
+    margin-left: 1580px;
+    height: 36px;
+    width: 100%;
+}
+
+.navbar1 {
+    position: absolute; 
+    top: 36px; 
+    width: 100%;
+    height: 54px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; 
+   
+}
+header{
+    position: absolute;
+    top: 90px;
+    z-index: 1; 
+}
+.nav1-logo{
+    height: 55px;
+    width: 65px;
+}
+.logo1{
+    background-image: url("ps.png");
+    background-size: cover;
+    margin-left: 10px;
+    height: 55px;
+    width: 100%;
+}
+.games-first{
+    font-size: 14px;
+}
+.nav-games{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    opacity: 1;
+}
+.games-second{
+    font-size: 14px;
+}
+.games-third{
+    text-decoration: none;
+}
+.nav-ps5{
+    display: flex;
+    align-items: center;
+    margin-left: 34px;
+}
+.icon{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: #007FFF;
+    background-color: transparent;
+    text-decoration: none;
+}
+.button-1 {
+  background-color: #7CB9E8;
+  border-radius: 40px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  height: 28px;
+  width: 81px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 635px;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #00308F;
+}
+input[type=text] {
+    text-align: left;
+    height: 25px;
+    margin-left: 10px;
+    border: 0.1px solid gray;
+}
+input[type=text]:hover{
+    outline: 2px solid gray;
+}
+.input-icons i {
+    position: absolute;
+    margin-left: 85px;
+    margin-top: 6px;
+}
+.navbar-2{
+    display: flex;
+    position: absolute;
+    height: 60px;
+    width: 1690.5px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+}
+.store-logo{
+    background-image: url("PlayStation_Store.png");
+    background-size: cover;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 10px;
+}
+.store-logo h3 {
+    color: red;
+    font-family: 'myFirstFont', sans-serif;
+    margin-left: 55px;
+    margin-top: 0.3rem;
+    font-size: 20px;
+}
+.navbar-2-text {
+    display: flex;
+    margin-left: 30rem;
+    text-align: center;
+}
+.btn {
+    border: 1.1px solid transparent;
+    background: none;
+    margin: 10px;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    transition: color 1s;
+    position: relative;
+    border-radius: 16px; 
+}
+
+.button-2, .button-6 {
+    color: red;
+}
+
+.button-3, .button-4, .button-5 {
+    color: red;
+}
+
+.button-2:hover, .button-6:hover {
+    color: #fff;
+}
+
+.button-3:hover, .button-4:hover, .button-5:hover {
+    color: #fff;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background: red;
+    z-index: -1;
+    transition:0.5s;
+}
+
+.button-2::before, .button-6::before {
+    border-radius: 90% 90% 50% 50%;
+}
+
+.button-3::before, .button-4::before, .button-5::before {
+    border-radius: 50% 50% 90% 90%;
+}
+
+.button-2:hover::before, .button-6:hover::before {
+    height: 100%;
+    border-radius: 16px;
+}
+
+.button-3:hover::before, .button-4:hover::before, .button-5:hover::before {
+    height: 100%;
+    border-radius: 16px;
+}
+.price{
+    height: 400px;
+    width: 600px;
+    position: absolute;
+    background-color: #28282B;
+    top: 350px;
+    opacity: 0.94;
+    left: 40px;
+}
+.price h3{
+    padding-top: 30px;
+    padding-left: 30px;
+    color: white;
+    text-align: left;
+    font-size: 33px;
+    font-weight: 100;
+}
+.price p{
+    color: #fff;
+    padding-top: 30px;
+    padding-left: 30px;
+    text-align: left;
+    font-weight: bolder;
+    font-size: smaller;
+}
+.gen{
+    display: flex;
+    margin-left: 30px;
+    margin-top: 10px;   
+}
+.gen p{
+    border: 1px solid white;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+.stars{
+    display: flex;
+    padding-top: 12px;
+    padding-left: 30px;
+}
+.stars h4,.stars i{
+    color: white;
+    margin-right: 10px;
+    font-weight: light;
+}
+.cost{
+    padding-top: 55px;
+    padding-left: 30px;
+}
+.cost h1{
+    color: #FFFFFF;
+    font-weight: lighter;
+}
+.but{
+    padding-top: 20px;
+    padding-left: 30px;
+    display: flex;
+}
+.but button{
+    width: 500px;
+    height: 2.4rem;
+    border-radius: 20px;
+    background-color: red;
+    border: 0.1px solid red;
+    font-size: 18px;
+    color: white;
+    font-weight: bolder;
+}
+.but i{
+    padding-top: 12px;
+    padding-left: 20px;
+    font-weight: bolder;
+    color: white;
+}
+.overlay {
+    position: absolute;
+    top: -5px;
+    left: -20rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin-left: 20%;
+    z-index: 1000;
+}
+.cart {
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    font-family: 'myFirstFont';
+    width: 300px;
+    position: fixed;
+    right: 0px;
+    top: 90px;
+    z-index: 10;
+    text-align: center;
+}
+
+.cart h3 {
+    margin-bottom: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.remove-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'myFirstFont';
+}
+.details{
+    background-color: black;
+    position: absolute;
+    top: 600px;
+    z-index: 1;
+    height: 180vh;
+    width: 99vw;
+    text-align: center;
+}
+.editions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.details h2{
+    color: #fff;
+    margin-top: 220px;
+    font-size: xx-large;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+.diff-ed {
+    position: relative;
+    height: 40vh;
+    width: 65vh;
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-bottom: 350px;
+}
+.diff-ed img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.det{
+    background-color: #1B1212;
+    position: absolute;
+    top: 40vh;
+    height: 40vh;
+    width: 65vh;
+    padding: 10px;
+    
+}
+.gene{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.det h1{
+    color: white;
+    font-weight: 100;
+    font-size: 25px;
+}
+.gene p{
+    color: white;
+    margin-top: 10px;
+    padding: 4px;
+    outline: 1px solid white;
+}
+.cost h3{
+    color: white;
+    font-weight: lighter;
+    display: flex;
+    justify-content: left;
+    margin-top: 80px;
+}
+.butt button{
+    width: 450px;
+    height: 2.4rem;
+    border-radius: 20px;
+    background-color: red;
+    border: 0.1px solid red;
+    font-size: 18px;
+    color: white;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+.butt i{
+    padding-top: 12px;
+    padding-left: 20px;
+    font-weight: bolder;
+    color: white;
+}
+footer {
+    background-color: #0039a6;
+    color: white;
+    padding: 40px 20px;
+    z-index: 100;
+    position: absolute;
+    top: 1600px;
+    left: 0;
+    width: 99vw;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .footer-column {
+    width: 25%;
+    margin-bottom: 20px;
+}
+
+footer .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer .footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-column ul li {
+    margin-bottom: 8px;
+}
+
+footer .footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+footer .footer-column-social i {
+    height: 25px;
+    width: 25px;
+}
+footer .footer-column-social i:hover{
+    opacity: 0.5;
+}
+footer .footer-column ul li a:hover {
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 992px) {
+    footer .footer-column {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    footer .footer-column {
+        width: 100%;
+    }
+}
+.footer-logo{
+    background-image: url("ps1.png");
+    background-size: contain;
+    height: 73px;
+    width: 90px;
+}
+hr {
+    width: 90%;
+    border: 0;
+    height: 1px;
+    background: #fff;
+    opacity: 0.35;
+}
+.media{
+    justify-content: center;
+    background-color: #FAF9F6;
+    align-items: center;
+    display: flex;
+    padding-top: 60px;
+}
+.media h3{
+    opacity: 0.7;
+    font-size: 35px;
+    font-weight: lighter;
+}
+.social-navbar {
+    background-color: #FAF9F6;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 404px;
+}
+
+.social-navbar .social-icon {
+    background-size: cover;
+    height: 155px;
+    width: 155px;
+    margin: 0 20px;
+    transition: transform 0.5s ease;
+}
+
+.social-navbar .social-icon:hover {
+    transform: scale(1.23);
+}
+
+.insta {
+    background-image: url('insta.jpg');
+    border-radius: 50%;
+}
+
+.linkedin {
+    background-image: url('linkedin.jpg');
+    border-radius: 10%;
+}
+
+.steam {
+    background-image: url('steam.jpg');
+}
+
+.yt {
+    background-image: url('yt.jpg');
+    background-size: cover;
+    height: 170px;
+    width: 170px;
+}
+@media screen and (max-width: 768px) {
+    .social-navbar .social-icon {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .social-navbar .social-icon {
+        height: 30px;
+        width: 30px;
+    }
+}
+.copy{
+    margin-top: 100px;
+    margin-right: 20px;
+}
+.checkout-button{
+    background: linear-gradient(to right,#E01C34,#ACABB0);
+    height: 40px;
+    width: 90px;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: 0.7s;
+}
+.checkout-button:hover{
+    height: 45px;
+    width: 95px;
+    opacity: 0.8;
+}
+
+

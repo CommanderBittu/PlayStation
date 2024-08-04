@@ -1,0 +1,777 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    border: border-box;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'myFirstFont';
+    src: url(./font.otf);
+}
+.navbar{
+    height: 36px;
+    background-color: black;
+}
+.nav-logo{
+    height: 36px;
+    width: 110px;
+}
+.logo
+{
+  background-image: url("Symbol-Sony.png");
+  background-size: contain;  
+  background-color: #1F1F1F;
+  margin-left: 1580px;
+  height: 36px;
+  width: 100%;
+}
+.navbar1 {
+    height: 64px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 1000; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.nav1-logo{
+    height: 55px;
+    width: 65px;
+}
+.logo1{
+    background-image: url("ps.png");
+    background-size: cover;
+    margin-left: 10px;
+    height: 55px;
+    width: 100%;
+}
+.games-first{
+    font-size: 14px;
+}
+.nav-games{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.games-second{
+    font-size: 14px;
+}
+.games-third{
+    text-decoration: none;
+}
+.nav-ps5{
+    display: flex;
+    align-items: center;
+    margin-left: 34px;
+}
+.icon{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: #007FFF;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.button-1 {
+  background-color: #7CB9E8;
+  border-radius: 40px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  height: 28px;
+  width: 81px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 635px;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #00308F;
+}
+input[type=text] {
+    text-align: left;
+    height: 25px;
+    margin-left: 10px;
+    border: 0.1px solid gray;
+}
+input[type=text]:hover{
+    outline: 2px solid gray;
+}
+.input-icons i {
+    position: absolute;
+    margin-left: 85px;
+    margin-top: 6px;
+}
+/**hero section**/
+
+.slider{
+    height: 100vh;
+    position: relative;
+}
+.slider .list .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.slider .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .list .item::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        to top, #000 40%, transparent
+    );
+}
+.slider .list .item .content{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+    color: white;
+}
+.slider .list .item .content p:nth-child(1){
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.slider .list .item .content h2{
+    font-size: 70px;
+    margin: 0;
+}
+.slider .list .item.active
+{
+    opacity: 1;
+    z-index: 10;
+}
+@keyframes showContent {
+    0% {
+        transform: translateY(30px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.button-2 {
+    background-color: white;
+    border-radius: 24px;
+    border-style: none;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 720;
+    height: 45px;
+    width: 152px;
+    line-height: 20px;
+    list-style: none;
+    margin-top: 23px;
+    outline: none;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: none;
+    opacity: 0;
+}
+.button-2.animate {
+    animation: showContent 1.8s ease-in-out forwards;
+}
+  .button-2:hover,
+.button-2:focus {
+  background-color: whitesmoke;
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3){
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+.slider .list .item.active h2{
+    animation-delay: 1s;
+}
+.slider .list .item.active p:nth-child(3){
+    animation-duration: 1.3s;
+}
+.arrows{
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 100;
+}
+.arrows button{
+    background-color: #eee5;
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #eee;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #eee;
+    color: black;
+}
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+}
+.thumbnail::-webkit-scrollbar{
+    width: 0;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    filter: brightness(.5);
+    transition: .5s;
+    flex-shrink: 0;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.thumbnail .item.active{
+    filter: brightness(1.5);
+}
+.thumbnail .item .content{
+    position: absolute;
+    inset: auto 10px 10px 10px;
+    color: white;
+}
+@media screen and (max-width: 678px) {
+    .thumbnail{
+        justify-content: start;
+    }
+    .slider .list .item .content h2{
+        font-size: 60px;
+    }
+    .arrows{
+        top: 10%;
+    }
+}
+.button-3 {
+    background-color: #007FFF;
+    border-radius: 24px;
+    border-style: none;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 720;
+    height: 45px;
+    width: 152px;
+    line-height: 20px;
+    list-style: none;
+    margin-top: 25px;
+    outline: none;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: none;
+    margin-left: 5px
+}
+.button-3:hover{
+    outline: 2px solid #007FFF;
+    outline-offset: 2px;
+}
+.text{
+    width: 490px;
+    height: 230px;
+    margin-left: 70px;
+    margin-top: 145px;
+    font-weight: 100;
+    font-size: 55px;
+    font-family:Helvetica, sans-serif;
+    align-items: center;
+    opacity: 0.77;
+}
+.console{
+    color: #007FFF;
+    font-family: 'myFirstFont', sans-serif;
+    font-size: 33px;
+    margin-left: 0px;
+    width: 400px;
+    height: 50px;
+}
+.content123{
+    font-size: 16px;
+    margin-left: 0px;
+    width: 490px;
+    opacity: .77;
+}
+.body{
+    display: flex;
+    justify-content: center;
+}
+.pic{
+    width: 1200px;
+    height: 650px;
+
+}
+.pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pic2{
+    width: 1200px;
+    height: 400px;
+
+}
+.pic2 img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+.body2{
+    display: flex;
+    margin-right: 200px;
+    margin-top: 50px;
+    justify-content: center;
+}
+.content1234{
+    font-size: 16px;
+    margin-left: 0px;
+    width: 650px;
+    opacity: .77;
+}
+.pic3{
+    width: 1200px;
+    height: 650px;
+
+}
+.pic3 img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+.pic4{
+    width: 1200px;
+    height: 550px;
+
+}
+.pic4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.navbar-for-list-games { 
+    background-color: white;
+    align-items: center;  
+    justify-content: center;  
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.navbar-for-list-games h3{
+    color: black;
+    font-size: 36px;
+    font-weight: 100;
+    font-family: 'myFirstFont', sans-serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+.list-games{
+    padding: 2rem;
+    background-color: black;
+}
+.list-games-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin:0 auto;
+}
+.list-games-slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+.list-games-slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+.slider-navigation {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.slider-navigation a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.7;
+}
+footer {
+    background-color: #0039a6;
+    color: white;
+    padding: 40px 20px;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .footer-column {
+    width: 25%;
+    margin-bottom: 20px;
+}
+
+footer .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer .footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-column ul li {
+    margin-bottom: 8px;
+}
+
+footer .footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+footer .footer-column-social i {
+    height: 25px;
+    width: 25px;
+}
+footer .footer-column-social i:hover{
+    opacity: 0.5;
+}
+footer .footer-column ul li a:hover {
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 992px) {
+    footer .footer-column {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    footer .footer-column {
+        width: 100%;
+    }
+}
+.footer-logo{
+    background-image: url("ps1.png");
+    background-size: contain;
+    height: 73px;
+    width: 90px;
+}
+hr {
+    width: 90%;
+    border: 0;
+    height: 1px;
+    background: #fff;
+    opacity: 0.35;
+}
+.media{
+    justify-content: center;
+    background-color: #FAF9F6;
+    align-items: center;
+    display: flex;
+    padding-top: 60px;
+}
+.media h3{
+    opacity: 0.7;
+    font-size: 35px;
+    font-weight: lighter;
+}
+.social-navbar {
+    background-color: #FAF9F6;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 404px;
+}
+
+.social-navbar .social-icon {
+    background-size: cover;
+    height: 155px;
+    width: 155px;
+    margin: 0 20px;
+    transition: transform 0.5s ease;
+}
+
+.social-navbar .social-icon:hover {
+    transform: scale(1.23);
+}
+
+.insta {
+    background-image: url('insta.jpg');
+    border-radius: 50%;
+}
+
+.linkedin {
+    background-image: url('linkedin.jpg');
+    border-radius: 10%;
+}
+
+.steam {
+    background-image: url('steam.jpg');
+}
+
+.yt {
+    background-image: url('yt.jpg');
+    background-size: cover;
+    height: 170px;
+    width: 170px;
+}
+@media screen and (max-width: 768px) {
+    .social-navbar .social-icon {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .social-navbar .social-icon {
+        height: 30px;
+        width: 30px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .button-1 {
+        margin-left: auto;
+    }
+    .text {
+        width: 80%;
+        font-size: 45px;
+        margin-left: 20px;
+        margin-top: 100px;
+    }
+    .console {
+        font-size: 28px;
+        width: 90%;
+    }
+    .content123,
+    .content1234 {
+        width: 90%;
+        font-size: 14px;
+    }
+    .body .pic, .body2 .pic2, .body .pic3, .body2 .pic4 {
+        width: 100%;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .button-3 {
+        margin-left: 2px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        height: auto;
+        padding: 10px;
+    }
+    .navbar1 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .nav-games,
+    .nav-ps5 {
+        margin-left: 0;
+        justify-content: center;
+    }
+    .button-1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .button-2, .button-3 {
+        width: 100%;
+        margin-left: 0;
+    }
+    .arrows {
+        top: 20%;
+        right: 20px;
+    }
+    .thumbnail {
+        height: 200px;
+        padding: 0 20px;
+    }
+    .thumbnail .item {
+        width: 100px;
+        height: 150px;
+    }
+    .footer-column {
+        width: 48%;
+    }
+    .slider .list .item .content h2 {
+        font-size: 50px;
+    }
+    .body .pic, .body2 .pic2, .body .pic3, .body2 .pic4 {
+        width: 90%;
+        height: 90%;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-logo,
+    .nav1-logo {
+        width: 50px;
+    }
+    .button-1, .button-2, .button-3 {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .slider .list .item .content h2 {
+        font-size: 40px;
+    }
+    .footer-column {
+        width: 100%;
+    }
+    .media {
+        padding-top: 30px;
+    }
+    .media h3 {
+        font-size: 28px;
+    }
+    .social-navbar .social-icon {
+        height: 100px;
+        width: 100px;
+    }
+    .slider .list .item {
+        height: 70vh;
+    }
+    .body .pic, .body2 .pic2, .body .pic3, .body2 .pic4 {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar1,
+    .nav-games,
+    .nav-ps5 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-games {
+        margin-left: 0;
+    }
+    .button-1,
+    .button-2,
+    .button-3 {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .text {
+        font-size: 35px;
+    }
+    .console {
+        font-size: 24px;
+    }
+    .social-navbar .social-icon {
+        height: 70px;
+        width: 70px;
+    }
+    .slider .list .item .content h2 {
+        font-size: 30px;
+    }
+    .slider .list .item {
+        height: 60vh;
+    }
+    .arrows {
+        top: 10%;
+    }
+    .body .pic, .body2 .pic2, .body .pic3, .body2 .pic4 {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+    

@@ -1,0 +1,97 @@
+/* checkout.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    background: linear-gradient(to right, #103CE7, #64E9FF);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.checkout-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    filter: drop-shadow(1px 1px 12px #103CE7);
+
+}
+
+h2 {
+    color: #392fc3;
+    margin-bottom: 20px;
+}
+
+.cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    background: linear-gradient(to left, #6157FF, #EE49FD);
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    filter: drop-shadow(1px 1px 12px #6157FF);
+}
+
+p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.total-price {
+    margin-bottom: 20px;
+}
+
+.total-price h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.btn {
+    border: 1.2px solid #103CE7;
+    background: none;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    transition: color 1s;
+    position: relative;
+    border-radius: 14px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.place-order-button {
+    color: #392fc3;
+}
+
+.place-order-button:hover {
+    color: #000;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background: #64E9FF;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.place-order-button::before {
+    border-radius: 90% 90% 50% 50%;
+}
+
+.place-order-button:hover::before {
+    height: 100%;
+    border-radius: 14px;
+}
